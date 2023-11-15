@@ -21,7 +21,7 @@ class SquareTestCase(unittest.TestCase):
         self.assertEqual(res, 43356522577489)
 
     def test_string_mul(self):
-        res = area('0', '10')
+        res = area('10')
         self.assertEqual(res, TypeError)
 
     def test_float_mul(self):
