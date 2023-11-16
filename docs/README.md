@@ -207,3 +207,23 @@ print(perimeter(2))
 | e4f3684a5 | Wed Sep 13 12:24:40 2023 | Sandra Min <minsandra81@gmail.com> | new file added |
 | 2a931293d | Wed Sep 13 12:26:04 2023 | Sandra Min <minsandra81@gmail.com> | bug has been fixed |
 | f46c99026a | Mon Oct 2 16:06:11 2023 | Sandra Min <minsandra81@gmail.com> | docs: comments has been added|
+| f1ab5c4c80 | Thu Nov 16 00:38:18 2023 | Sandra Min <minsandra81@gmail.com> | test: added unittets|
+| 513725a076 | Thu Nov 16 00:59:31 2023 | Sandra Min <minsandra81@gmail.com> |  test: unittests updated|
+| 480cb520d1 | Thu Nov 16 03:13:57 2023 | Sandra Min <minsandra81@gmail.com> |   merge: merged with documentation_409137|
+
+#Tests success rate
+
+Test success: x/n(p%).
+x - successfully passed tests.
+n - total tests.
+p - per sent of success rating.
+
+x = 40
+n = 56
+p = 71%
+
+Tests included big and small numbers, null, string and float value. 
+
+Verdict: All the failed tests included non-int type or negative value. So, these functions can't check the type of value user inputs.
+
+
