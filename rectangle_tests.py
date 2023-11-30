@@ -21,16 +21,14 @@ class RectangleTestCase(unittest.TestCase):
         self.assertEqual(res, 35987733647789)
 
     def test_string_mul(self):
-        res = area('0', '10')
-        self.assertEqual(res, TypeError)
+        self.assertRaises(TypeError, area, '0', '10')
 
     def test_float_mul(self):
         res = area(456.23, 986.4567)
         self.assertEqual(res, 450051.140241)
 
     def test_negative_mul(self):
-        res = area(-10, 1)
-        self.assertEqual(res, TypeError)     
+        self.assertRaises(TypeError, area, -10, 1)
 
     def test_zero_per(self):
         res = perimeter(0, 0)
@@ -49,13 +47,11 @@ class RectangleTestCase(unittest.TestCase):
         self.assertEqual(res, 24100068)
 
     def test_string_per(self):
-        res = area('0', '10')
-        self.assertEqual(res, TypeError)
+        self.assertRaises(TypeError, area, '0', '10')
 
     def test_float_per(self):
         res = perimeter(456.23, 986.4567)
         self.assertEqual(res, 2885.3734)
 
     def test_negative_per(self):
-        res = perimeter(-10, 1)
-        self.assertEqual(res, TypeError)
+        self.assertRaises(TypeError, perimeter, -10, 1)

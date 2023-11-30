@@ -21,16 +21,14 @@ class TriangleTestCase(unittest.TestCase):
         self.assertEqual(res, 89055412110)
 
     def test_string_mul(self):
-        res = area('0', '10')
-        self.assertEqual(res, TypeError)
+        self.assertRaises(TypeError, area, '0', '10')
 
     def test_float_mul(self):
         res = area(567.80, 345.68)
         self.assertEqual(res, 98138.552)
 
     def test_negative_mul(self):
-        res = area(-10, 1)
-        self.assertEqual(res, TypeError)     
+        self.assertRaises(TypeError, area, -10, 1)    
 
     def test_zero_per(self):
         res = perimeter(0, 0, 0)
@@ -49,13 +47,11 @@ class TriangleTestCase(unittest.TestCase):
         self.assertEqual(res, 12084601)
 
     def test_string_per(self):
-        res = area('0', '10', '1')
-        self.assertEqual(res, TypeError)
+        self.assertRaises(TypeError, area, '0', '10', '1')
 
     def test_float_per(self):
         res = perimeter(456.23, 986.4567, 56.9)
         self.assertEqual(res, 1499.5867)
 
     def test_negative_per(self):
-        res = perimeter(-10, 1, 1)
-        self.assertEqual(res, TypeError)
+        self.assertRaises(TypeError, perimeter, -10, 1, 1)

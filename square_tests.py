@@ -21,16 +21,14 @@ class SquareTestCase(unittest.TestCase):
         self.assertEqual(res, 43356522577489)
 
     def test_string_mul(self):
-        res = area('10')
-        self.assertEqual(res, TypeError)
+        self.assertRaises(TypeError, area, '10')
 
     def test_float_mul(self):
         res = area(986.4567)
         self.assertEqual(res, 973096.8209748899)
 
     def test_negative_mul(self):
-        res = area(-10)
-        self.assertEqual(res, TypeError)     
+        self.assertRaises(TypeError, area, -10)  
 
     def test_zero_per(self):
         res = perimeter(0)
@@ -45,13 +43,11 @@ class SquareTestCase(unittest.TestCase):
         self.assertEqual(res, 21861868)
 
     def test_string_per(self):
-        res = area('10')
-        self.assertEqual(res, TypeError)
+        self.assertRaises(TypeError, area, '10')
 
     def test_float_per(self):
         res = perimeter(456.23)
         self.assertEqual(res, 1824.92)
 
     def test_negative_per(self):
-        res = perimeter(-10)
-        self.assertEqual(res, TypeError)
+        self.assertRaises(TypeError, perimeter, -10)

@@ -21,16 +21,14 @@ class CircleTestCase(unittest.TestCase):
         self.assertEqual(res, 119728472451138.44)
 
     def test_string_mul(self):
-        res = area('10')
-        self.assertEqual(res, TypeError)
+        self.assertRaises(TypeError, area, '10')
 
     def test_float_mul(self):
         res = area(456.23)
         self.assertEqual(res, 653909.3566821157)
 
     def test_negative_mul(self):
-        res = area(-10)
-        self.assertEqual(res, TypeError)     
+        self.assertRaises(TypeError, area, -10)     
 
     def test_zero_per(self):
         res = perimeter(0)
@@ -49,13 +47,11 @@ class CircleTestCase(unittest.TestCase):
         self.assertEqual(res, 38788559.62667469)
 
     def test_string_per(self):
-        res = area('10')
-        self.assertEqual(res, TypeError)
+        self.assertRaises(TypeError, area, '10')
 
     def test_float_per(self):
         res = perimeter(456.23)
         self.assertEqual(res, 2866.577632694543)
 
     def test_negative_per(self):
-        res = perimeter(-10)
-        self.assertEqual(res, TypeError)
+        self.assertRaises(TypeError, perimeter, -10)
