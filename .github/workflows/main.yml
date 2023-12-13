@@ -7,6 +7,9 @@ on:
     branches:
     - '*'
 
+permissions:
+  contents: read
+
 jobs:
   ubuntu_latest_testing:
     runs-on: ubuntu-latest
@@ -18,8 +21,8 @@ jobs:
         with:
           python-version: "3.10"
       - name: Run unit tests
-        run:
-          python -m unittest
+        run: python -m unittest
+        
   windows_latest_testing:
     runs-on: windows-latest
     steps:
@@ -30,5 +33,5 @@ jobs:
         with:
           python-version: "3.10"
       - name: Run unit tests
-        run:
-          python -m unittest
+        run: python -m unittest
+        
